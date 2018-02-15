@@ -1,7 +1,9 @@
 class AppDelegate < PM::Delegate
+  include PM::Styling
   status_bar true, animation: :none
 
   def on_load(app, options)
+    set_appearance_defaults
     open_menu HomeScreen.new(nav_bar: true), left: MenuScreen, to_show: :pan_nav_bar, to_hide: :pan_nav_bar
   end
 
@@ -24,5 +26,9 @@ class AppDelegate < PM::Delegate
   def close_drawer(args={}, &callback)
     args[:animated] ||= false
     @mm_drawer_controller.closeDrawerAnimated(args[:animated], completion: callback)
+  end
+
+  def set_appearance_defaults
+    UINavigationBar.appearance.barTintColor = hex_color("B82228")
   end
 end

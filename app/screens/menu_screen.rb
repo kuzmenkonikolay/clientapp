@@ -2,37 +2,65 @@ class MenuScreen < PM::TableScreen
   title "Menu"
 
   def on_load
-    self.view.backgroundColor = UIColor.redColor
+    self.view.backgroundColor = UIColor.whiteColor
   end
 
   def table_data
     [{
-         title: nil,
-         cells: [{
-                     title: nil,
-                     action: nil
-                 }]
-     }, {
-         title: nil,
+         title: 'TheKatAgency',
+         title_view_height: 50,
          cells: [
              {
                  title: "Dashboard",
                  action: :dashboard,
-                 properties: {
-                     icon: 'https://cdn.thekatagency.com/the_kat_bot.png'
-                 }
+                 height: 40,
+                 properties: { # (Edge change, use `style:` in ProMotion 2.0.x)
+                               masks_to_bounds: true,
+                               background_color: UIColor.whiteColor, # Creates a UIView for the backgroundView
+                 },
+                 image: {
+                     image: "images/icons/dashboard.png", # PM will do `UIImage.imageNamed("something")` for you
+                     # radius: 15 # radius is optional
+                 },
              },
              {
                  title: "Inquiries",
-                 action: :inquiries
+                 height: 40,
+                 properties: { # (Edge change, use `style:` in ProMotion 2.0.x)
+                               masks_to_bounds: true,
+                               background_color: UIColor.whiteColor, # Creates a UIView for the backgroundView
+                 },
+                 action: :inquiries,
+                 image: {
+                     image: "images/icons/inquiries.png", # PM will do `UIImage.imageNamed("something")` for you
+                     # radius: 15 # radius is optional
+                 },
              },
              {
                  title: "Settings",
-                 action: :settings
+                 height: 40,
+                 properties: { # (Edge change, use `style:` in ProMotion 2.0.x)
+                               masks_to_bounds: true,
+                               background_color: UIColor.whiteColor, # Creates a UIView for the backgroundView
+                 },
+                 action: :settings,
+                 image: {
+                     image: "images/icons/settings.png", # PM will do `UIImage.imageNamed("something")` for you
+                     # radius: 15 # radius is optional
+                 },
              },
              {
                  title: "Bookings",
-                 action: :bookings
+                 height: 40,
+                 properties: { # (Edge change, use `style:` in ProMotion 2.0.x)
+                               masks_to_bounds: true,
+                               background_color: UIColor.whiteColor, # Creates a UIView for the backgroundView
+                 },
+                 action: :bookings,
+                 image: {
+                     image: "images/icons/bookings.png", # PM will do `UIImage.imageNamed("something")` for you
+                     # radius: 15 # radius is optional
+                 },
              }
          ]
      }]
