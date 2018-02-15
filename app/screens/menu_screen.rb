@@ -15,7 +15,6 @@ class MenuScreen < PM::TableScreen
                  action: :dashboard,
                  height: 40,
                  properties: { # (Edge change, use `style:` in ProMotion 2.0.x)
-                               masks_to_bounds: true,
                                background_color: UIColor.whiteColor, # Creates a UIView for the backgroundView
                  },
                  image: {
@@ -27,7 +26,6 @@ class MenuScreen < PM::TableScreen
                  title: "Inquiries",
                  height: 40,
                  properties: { # (Edge change, use `style:` in ProMotion 2.0.x)
-                               masks_to_bounds: true,
                                background_color: UIColor.whiteColor, # Creates a UIView for the backgroundView
                  },
                  action: :inquiries,
@@ -40,7 +38,6 @@ class MenuScreen < PM::TableScreen
                  title: "Settings",
                  height: 40,
                  properties: { # (Edge change, use `style:` in ProMotion 2.0.x)
-                               masks_to_bounds: true,
                                background_color: UIColor.whiteColor, # Creates a UIView for the backgroundView
                  },
                  action: :settings,
@@ -53,7 +50,6 @@ class MenuScreen < PM::TableScreen
                  title: "Bookings",
                  height: 40,
                  properties: { # (Edge change, use `style:` in ProMotion 2.0.x)
-                               masks_to_bounds: true,
                                background_color: UIColor.whiteColor, # Creates a UIView for the backgroundView
                  },
                  action: :bookings,
